@@ -25,5 +25,22 @@
   top: 100px;
   left: 24px;
   cursor: pointer;
-  
+}
+.settings{
+  position: fixed;
+  top: 180px;
+  left: 24px;
+  cursor: pointer;
+}
+.phone{
+  position: fixed;
+  top: 260px;
+  left: 24px;
+  cursor: pointer;
+}
+.zar{
+  position: fixed;
+  top: 340px;
+  left: 24px;
+  cursor: pointer;
 }

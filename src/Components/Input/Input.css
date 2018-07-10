@@ -13,9 +13,10 @@
     background: #538637!important;
 }
 .mainInput{
+  margin-bottom: 30px;
     position: relative!important;
     border-top: solid 2px #E6ECF5;
-    left: 11%;
+    left: 0;
     width: 630px;
     padding-left: 100px;
     padding-right: 65px;

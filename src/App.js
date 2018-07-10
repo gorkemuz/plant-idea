@@ -42,8 +42,10 @@ class App extends Component {
                         (this.state.route === 'home')
                             ?<div>
                                   <Header/>
-                                  <Content/>
-                                  <Input/>
+                                  <div className='container'>
+                                    <Content/>
+                                    <Input/>
+                                  </div>
                                   <Answer/>
                                   <LeftBar/>
                                   <RightBar/>

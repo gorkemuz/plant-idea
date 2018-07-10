@@ -2,3 +2,19 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+.container{
+  width: fit-content;
+  max-width: 800px;
+  color: #5B5D6E;
+  height: auto;
+  position: relative;
+  left: 10%;
+  top: 130px;
+  font-family: 'Montserrat', sans-serif!important;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border: solid 1px #D5DDE7;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
