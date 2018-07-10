@@ -13,7 +13,7 @@ const Login = ({ routeChange, routeSwitch }) => {
                         <form className="login-form">
                             <input type="text" placeholder="Kullanıcı Adı"/>
                             <input type="password" placeholder="Şifre"/>
-                            <button onClick={routeChange}>login</button>
+                            <button onClick={routeChange}>giris yap</button>
                             <p className="message">Henüz Kayıt Olmadınız mı?  <label className='register-label' onClick={routeSwitch}>Kayıt Ol</label></p>
                         </form>
                     </div>

@@ -14,7 +14,7 @@ const Register = ({ routeChange }) => {
                           <input type="text" placeholder="Kullanıcı Adı"/>
                           <input type="password" placeholder="Şifre"/>
                           <input type="email" placeholder="E-mail"/>
-                          <button onClick={ routeChange}>register</button>
+                          <button onClick={ routeChange}>kayıt ol</button>
                       </form>
                   </div>
               </div>

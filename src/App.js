@@ -45,8 +45,8 @@ class App extends Component {
                                   <Content/>
                                   <Input/>
                                   <Answer/>
-                                  <RightBar/>
                                   <LeftBar/>
+                                  <RightBar/>
                               </div>
                             :((this.state.route === 'login')
                             ?<Login routeChange={ this.routeHome} routeSwitch={ this.routeRegister }/>

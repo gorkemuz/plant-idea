@@ -31,25 +31,25 @@
 }
 .answer-nick{
     position: relative;
-    left: 200px;
-    top:-63px;
+    left: 120px;
+    top:0px;
     color: purple;
 }
 .answer-date{
     position: relative;
-    left: 112px;
-    top:-30px;
+    left: 102px;
+    top:0px;
     color: #008000;
 }
 .seed{
     position:relative;
     font-size: 35px;
     color: #76b852;
-    top: -20px;
+    top: 25px;
 }
 .arrow-up {
     position: relative;
-    top: 70px;
+    top: 15px;
     left: 17px;
 }
 .arrow-down{
