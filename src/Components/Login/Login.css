@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+.login-page {
+    position: relative;
+    top: 50px;
+    height: 400px;
+    width: 1000px;
+    padding: 8% 0 0;
+    margin: auto;
+    background: #FFFFFF;
+    border-radius: 5px;
+}
+.form {
+    position: relative;
+    max-width: 360px;
+    margin-left: 500px;
+    padding: 45px;
+}
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #E6E6E6;
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: solid 1px #D5DDE7;
+}
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #6495ed;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+    background: #4c38b6;
+}
+.form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+}
+.form .message a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+.form .register-form {
+    display: none;
+}
+
+.screen{
+    width: 100%;
+    height: 648px;
+    background-color: #6956CB;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.welcome-div{
+    position: absolute;
+    top: 50px;
+    width: 1000px;
+    height: 500px;
+}
+.welcome-p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    left: 13%;
+    color: #6495ed;
+}
+.info-p{
+    position: absolute;
+    top: 30%;
+    left: 7%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    max-width: 400px;
+    color: #4CAF50;
+}
+.register-label{
+  cursor: pointer;
+  color: green;
+}

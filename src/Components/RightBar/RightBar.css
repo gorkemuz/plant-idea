@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+.Kategoriler{
+    position: absolute;
+    color: #535566;
+    font-size: 15px;
+    top: 130px;
+    left: 1000px;
+    height:auto;
+    border: solid 1px #D5DDE7;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    width: 300px;
+    padding: 5px;
+    background-color: #ffffff;
+    opacity: 0.95;
+    text-align: left;
+}
+.kategori{
+    font-size: 14px;
+    text-align: left;
+    margin-left:10px;
+    cursor: pointer;
+    border-top: solid 1px #E6ECF5;
+    padding-bottom:10px;
+    padding-top:10px;
+}
+.kategori-title{
+    padding: 10px;
+    padding-left: 20px;
+    font-weight: bold;
+}

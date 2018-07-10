@@ -1,0 +1,22 @@
+.Input{
+    width: 400px!important;
+    font-weight: 300!important;
+    position: relative!important;
+}
+.plant-button{
+    left: 8%;
+    color: white!important;
+    background-color:#76b852!important;
+    font-weight: 500!important;
+}
+.plant-button:hover{
+    background: #538637!important;
+}
+.mainInput{
+    position: relative!important;
+    border-top: solid 2px #E6ECF5;
+    left: 11%;
+    width: 630px;
+    padding-left: 100px;
+    padding-right: 65px;
+}
