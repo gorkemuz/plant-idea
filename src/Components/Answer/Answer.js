@@ -15,7 +15,7 @@ class Answer extends Component{
                     <img alt='user' className='arrow-down' src={arrow} height='34px'/>
                   </div>
                   <div className='content'>
-                    <p className='answer'>Seamles quality -proof ideas through granular content. Rapidiously pontificate transparent systems rather.</p>
+                    <p className='answer'>Seamles quality -proof ideas through granular content. Rapidiously pontificate transparent  Seamles quality -proof ideas through granular content. Rapidiously pontificate transparent  Seamles quality -proof ideas through granular content. Rapidiously pontificate transparent Seamles quality -proof ideas through granular content. Rapidiously pontificate transparent Seamles quality -proof ideas through granular content. Rapidiously pontificate transparent Seamles quality -proof ideas through granular content. Rapidiously pontificate transparent systems rather.</p>
                   </div>
                   <div className='answers-info'>
                       <label className='answer-date'>10/02/2018</label>
