@@ -1,37 +1,37 @@
-.Input{
-    width: 300px!important;
-    font-weight: 300!important;
-    position: relative!important;
+.Input {
+    width: 300px !important;
+    font-weight: 300 !important;
+    position: relative !important;
 }
-.plant-button{
+.plant-button {
     left: 8%;
-    color: white!important;
-    background-color:#76b852!important;
-    font-weight: 500!important;
+    color: white !important;
+    background-color: #76b852 !important;
+    font-weight: 500 !important;
 }
-.plant-button:hover{
-    background: #538637!important;
+.plant-button:hover {
+    background: #538637 !important;
 }
-.mainInput{
-  margin-bottom: 30px;
-    position: relative!important;
-    border-top: solid 2px #E6ECF5;
+.mainInput {
+    margin-bottom: 30px;
+    position: relative !important;
+    border-top: solid 2px #e6ecf5;
     left: 0;
     width: 430px;
     padding-left: 100px;
     padding-right: 65px;
 }
-  @media screen and (max-width: 500px) {
-      .mainInput{
+@media screen and (max-width: 500px) {
+    .mainInput {
         margin-bottom: 5px;
         width: 205px;
         padding: 0;
         left: 10px;
-      }
-      .Input{
-        width: 150px!important;
-      }
-      .plant-button{
+    }
+    .Input {
+        width: 150px !important;
+    }
+    .plant-button {
         left: 0;
-      }
-  }
+    }
+}

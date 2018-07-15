@@ -1,15 +1,13 @@
-import React from 'react';
-import './RightBar.css';
+import React from "react";
+import "./rightbar.css";
 
-
-const RightBar = ({title}) => {
+const RightBar = ({ title }) => {
     return (
-        <div className='Kategoriler'>
-            <p className='kategori-title'>Popüler İçerikler</p>
-            { title.map(item => <p className='kategori'>{item}</p> ) }
+        <div className="Kategoriler">
+            <p className="kategori-title">Popüler İçerikler</p>
+            {title.map(item => <p className="kategori">{item}</p>)}
         </div>
-
     );
-}
+};
 
 export default RightBar;

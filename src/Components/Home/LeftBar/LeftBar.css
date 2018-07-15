@@ -1,79 +1,80 @@
-.left-bar{
-  top: 0;
-  position: fixed!important;
-  width: 100px;
-  height: 100%;
-  border-right: 2px solid white;
-  background-color: #59913B;
-  z-index: 2;
+.left-bar {
+    top: 0;
+    position: fixed !important;
+    width: 100px;
+    height: 100%;
+    border-right: 2px solid white;
+    background-color: #59913b;
+    z-index: 2;
 }
-.icon{
-  position: fixed;
-  top: 5px;
-  left: 18px;
+.icon {
+    position: fixed;
+    top: 5px;
+    left: 18px;
 }
-.icon-back{
-  position: fixed;
-  width: 100px;
-  left:0;
-  top: 0;
-  height: 11.3%;
-  border-bottom: 2px solid white;
+.icon-back {
+    position: fixed;
+    width: 100px;
+    left: 0;
+    top: 0;
+    height: 11.3%;
+    border-bottom: 2px solid white;
 }
-.history{
-  position: fixed;
-  top: 100px;
-  left: 24px;
-  cursor: pointer;
+.history {
+    position: fixed;
+    top: 100px;
+    left: 24px;
+    cursor: pointer;
 }
-.settings{
-  position: fixed;
-  top: 180px;
-  left: 24px;
-  cursor: pointer;
+.settings {
+    position: fixed;
+    top: 180px;
+    left: 24px;
+    cursor: pointer;
 }
-.phone{
-  position: fixed;
-  top: 260px;
-  left: 24px;
-  cursor: pointer;
+.phone {
+    position: fixed;
+    top: 260px;
+    left: 24px;
+    cursor: pointer;
 }
-.zar{
-  position: fixed;
-  top: 340px;
-  left: 24px;
-  cursor: pointer;
-}  @media screen and (max-width: 500px) {
-              .icon{
-                top: 2px;
-                height: 30px!important;
-                left: 3%;
-              }
-              .icon-back{
-                height: 10%;
-                width: 20%;
-              }
-              .history{
-                height: 20px;
-                left: 4%;
-                  top: 60px;
-              }
-              .settings{
-                height: 20px;
-                left: 4%;
-                  top: 100px;
-              }
-              .phone{
-                height: 20px;
-                left: 4%;
-                  top: 140px;
-              }
-              .zar{
-                height: 20px;
-                left: 4%;
-                  top: 180px;
-              }
-              .left-bar{
-                width: 15%;
-              }
+.zar {
+    position: fixed;
+    top: 340px;
+    left: 24px;
+    cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+    .icon {
+        top: 2px;
+        height: 30px !important;
+        left: 3%;
+    }
+    .icon-back {
+        height: 10%;
+        width: 20%;
+    }
+    .history {
+        height: 20px;
+        left: 4%;
+        top: 60px;
+    }
+    .settings {
+        height: 20px;
+        left: 4%;
+        top: 100px;
+    }
+    .phone {
+        height: 20px;
+        left: 4%;
+        top: 140px;
+    }
+    .zar {
+        height: 20px;
+        left: 4%;
+        top: 180px;
+    }
+    .left-bar {
+        width: 15%;
+    }
 }

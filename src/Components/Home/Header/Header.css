@@ -1,101 +1,101 @@
 /* Style the header with a grey background and some padding */
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Raleway");
 .header {
     border-bottom: solid 2px white;
-    position: fixed!important;
+    position: fixed !important;
     left: 0px;
     width: 100%;
     height: 11.3%;
     background-color: #76b852;
-    z-index:1;
-  }
+    z-index: 1;
+}
 
-  /* Style the header links */
+/* Style the header links */
 .header a {
     float: left;
-    font-size: auto!important;
+    font-size: auto !important;
     line-height: 25px;
     color: #ffffff;
-    font-family: 'Raleway', sans-serif;
-  }
+    font-family: "Raleway", sans-serif;
+}
 
-  /* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
 .header a.logo {
     font-size: 35px;
-    font-weight: 700!important;
+    font-weight: 700 !important;
     margin-left: 100px;
     text-decoration: none;
     padding: 25.5px;
     position: relative;
     height: 11.3%;
-  }
+}
 
-  /* Change the background color on mouse-over */
-  .header a:hover {
+/* Change the background color on mouse-over */
+.header a:hover {
     cursor: pointer;
-  }
+}
 
-  /* Style the active/current link*/
-  .header a.active {
+/* Style the active/current link*/
+.header a.active {
     background-color: dodgerblue;
     color: white;
-  }
+}
 
-  /* Float the link section to the right */
-  .header-right {
+/* Float the link section to the right */
+.header-right {
     float: right;
     margin-right: 100px;
     margin-top: 10px;
     color: #ffffff;
-  }
+}
 
-  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
-  @media screen and (max-width: 500px) {
-                .header{
-                  height: 10%;
-                }
-                .header a {
-                  display: block;
-                  text-align: left;
-                  font-size: 15px!important;
-                }
-                .header a.logo {
-                  height: 5%;
-                  padding: 6px;
-                  padding-left: 0;
-                  margin-left: 50px;
-                  float: left!important;
-                  margin-right: 10px;
-                }
-                .header-right {
-                    float: left!important;
-                    margin-top: 10px;
-                    color: #ffffff;
-                    margin-right: 0px;
-                  }
-                .user{
-                  position: relative;
-                  top: -5px;
-                  height: 25px!important;
-                }
-                .nickname{
-                  top: -15px!important;
-                }
-                .dot{
-                  top: -15px!important;
-                }
-  }
-  .nickname{
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+    .header {
+        height: 10%;
+    }
+    .header a {
+        display: block;
+        text-align: left;
+        font-size: 15px !important;
+    }
+    .header a.logo {
+        height: 5%;
+        padding: 6px;
+        padding-left: 0;
+        margin-left: 50px;
+        float: left !important;
+        margin-right: 10px;
+    }
+    .header-right {
+        float: left !important;
+        margin-top: 10px;
+        color: #ffffff;
+        margin-right: 0px;
+    }
+    .user {
+        position: relative;
+        top: -5px;
+        height: 25px !important;
+    }
+    .nickname {
+        top: -15px !important;
+    }
+    .dot {
+        top: -15px !important;
+    }
+}
+.nickname {
     position: relative;
     font-size: 12px;
-    font-weight: 700!important;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: 700 !important;
+    font-family: "Montserrat", sans-serif;
     margin: 5px;
     top: -20px;
-  }
-  .dot{
-      position: relative;
-      left: 3%;
-      top: -18px;
-  }
+}
+.dot {
+    position: relative;
+    left: 3%;
+    top: -18px;
+}
