@@ -8,18 +8,18 @@ import RightBar from "./rightbar/rightbar";
 import LeftBar from "./leftbar/leftbar";
 
 const Home = ({ titles }) => {
-    return (
-        <div>
-            <Header />
-            <div className="container">
-                <Content />
-                <Input />
-            </div>
-            <Answer />
-            <LeftBar />
-            <RightBar title={titles} />
-        </div>
-    );
+  return (
+    <div>
+      <Header />
+      <div className="container">
+        <Content />
+        <Input />
+      </div>
+      <Answer />
+      <LeftBar />
+      <RightBar title={titles} />
+    </div>
+  );
 };
 
 export default Home;

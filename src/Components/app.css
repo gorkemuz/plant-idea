@@ -1,32 +1,32 @@
 @keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .container {
-    width: fit-content;
-    max-width: 750px;
-    color: #5b5d6e;
-    height: auto;
-    position: relative;
-    left: 12%;
-    top: 130px;
-    font-family: "Montserrat", sans-serif !important;
-    text-align: center;
-    background-color: #ffffff;
-    padding: 10px;
-    border: solid 1px #d5dde7;
-    border-radius: 5px;
-    margin-bottom: 0px;
+  width: fit-content;
+  max-width: 750px;
+  color: #5b5d6e;
+  height: auto;
+  position: relative;
+  left: 12%;
+  top: 130px;
+  font-family: "Montserrat", sans-serif !important;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 10px;
+  border: solid 1px #d5dde7;
+  border-radius: 5px;
+  margin-bottom: 0px;
 }
 @media screen and (max-width: 500px) {
-    .container {
-        max-width: 225px;
-        top: 45px;
-        padding: 0;
-        left: 48px;
-    }
+  .container {
+    max-width: 225px;
+    top: 45px;
+    padding: 0;
+    left: 48px;
+  }
 }

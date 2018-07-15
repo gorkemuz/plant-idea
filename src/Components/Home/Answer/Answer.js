@@ -7,19 +7,32 @@ class Answer extends Component {
       <div className="main">
         <div className="kart">
           <div className="answers-stats">
-            <img alt="user" className="arrow-up" src="images/arrow-up.png" height="34px" />
+            <img
+              alt="user"
+              className="arrow-up"
+              src="images/arrow-up.png"
+              height="34px"
+            />
             <i className="fas fa-seedling seed" />
-            <img alt="user" className="arrow-down" src="images/arrow.png" height="34px" />
+            <img
+              alt="user"
+              className="arrow-down"
+              src="images/arrow.png"
+              height="34px"
+            />
           </div>
           <div className="content">
             <p className="answer">
-              Seamles quality -proof ideas through granular content. Rapidiously pontificate
-              transparent Seamles quality -proof ideas through granular content. Rapidiously
-              pontificate transparent Seamles quality -proof ideas through granular content.
-              Rapidiously pontificate transparent Seamles quality -proof ideas through granular
-              content. Rapidiously pontificate transparent Seamles quality -proof ideas through
-              granular content. Rapidiously pontificate transparent Seamles quality -proof ideas
-              through granular content. Rapidiously pontificate transparent systems rather.
+              Seamles quality -proof ideas through granular content. Rapidiously
+              pontificate transparent Seamles quality -proof ideas through
+              granular content. Rapidiously pontificate transparent Seamles
+              quality -proof ideas through granular content. Rapidiously
+              pontificate transparent Seamles quality -proof ideas through
+              granular content. Rapidiously pontificate transparent Seamles
+              quality -proof ideas through granular content. Rapidiously
+              pontificate transparent Seamles quality -proof ideas through
+              granular content. Rapidiously pontificate transparent systems
+              rather.
             </p>
           </div>
           <div className="answers-info">
@@ -29,15 +42,26 @@ class Answer extends Component {
         </div>
         <div className="kart">
           <div className="answers-stats">
-            <img alt="user" className="arrow-up" src="images/arrow-up.png" height="34px" />
+            <img
+              alt="user"
+              className="arrow-up"
+              src="images/arrow-up.png"
+              height="34px"
+            />
             <i className="fas fa-seedling seed" />
-            <img alt="user" className="arrow-down" src="images/arrow.png" height="34px" />
+            <img
+              alt="user"
+              className="arrow-down"
+              src="images/arrow.png"
+              height="34px"
+            />
           </div>
           <div className="content">
             <p className="answer">
-              Seamlessly initiate inexpensive quality vectors through error-free best practices.
-              Credibly transition future-proof ideas through granular content. Rapidiously
-              pontificate transparent systems rather.
+              Seamlessly initiate inexpensive quality vectors through error-free
+              best practices. Credibly transition future-proof ideas through
+              granular content. Rapidiously pontificate transparent systems
+              rather.
             </p>
           </div>
           <div className="answers-info">

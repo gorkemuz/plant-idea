@@ -9,7 +9,12 @@ class Header extends Component {
           PLANT.LOGO
         </a>
         <div className="header-right">
-          <img alt="user" className="user" src="images/farmer1.png" height="48px" />
+          <img
+            alt="user"
+            className="user"
+            src="images/farmer1.png"
+            height="48px"
+          />
           <label className="nickname">rheawin</label>
           <img alt="more" className="dot" src="images/dot.png" width="8px" />
         </div>
