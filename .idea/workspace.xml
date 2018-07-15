@@ -1,37 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e95bb48-f7f7-42ea-94bc-69d5060dc989" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Components/Home/Answer/Answer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Answer/Answer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Answer/Answer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Answer/arrow-up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Answer/arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/Content.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/Content.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/dot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/farmer1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Input/Input.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Input/Input.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LeftBar/LeftBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LeftBar/LeftBar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LeftBar/die.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LeftBar/history.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LeftBar/settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LeftBar/smartphone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/LeftBar/tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Register/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/RightBar/RightBar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/RightBar/RightBar.js" beforeDir="false" />
-    </list>
+    <list default="true" id="0e95bb48-f7f7-42ea-94bc-69d5060dc989" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -314,12 +284,12 @@
       <workItem from="1531140815402" duration="204000" />
       <workItem from="1531156176731" duration="85000" />
       <workItem from="1531650914400" duration="235000" />
-      <workItem from="1531651180109" duration="3282000" />
+      <workItem from="1531651180109" duration="3883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36487000" />
+    <option name="totallyTimeSpent" value="37088000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="723" extended-state="6" />

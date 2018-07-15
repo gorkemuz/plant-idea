@@ -15,20 +15,6 @@ class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            aciklamaListesi: [
-                {
-                    adres: "Nevşehir, Türkiye",
-                },
-                {
-                    yaş: new Date().getFullYear() - 2001,
-                },
-                {
-                    eposta: "react.developer6@gmail.com",
-                },
-                {
-                    telefon: "0(543) 270 15 88"
-                }
-            ],
             Titles:['İçinde yaşadığımız evren gerçek mi?','Özgür irademiz var mı?','Neden hiçlik yerine bir şeyler var?','Rakamlar tam olarak nedir?']
         }}
         render(){
