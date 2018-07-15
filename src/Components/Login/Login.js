@@ -1,7 +1,7 @@
 import React from 'react';
 import './Login.css';
-
-const Login = ({ routeChange, routeSwitch }) => {
+import {Link} from 'react-router-dom';
+const Login = () => {
         return (
                 <div className="login-page">
                     <div className='welcome-div'>
@@ -12,8 +12,8 @@ const Login = ({ routeChange, routeSwitch }) => {
                         <form className="login-form">
                             <input type="text" placeholder="Kullanıcı Adı"/>
                             <input type="password" placeholder="Şifre"/>
-                            <button onClick={routeChange}>giris yap</button>
-                            <p className="message">Henüz Kayıt Olmadınız mı?  <label className='register-label' onClick={routeSwitch}>Kayıt Ol</label></p>
+                            <Link to='/home'><button>PLANT</button></Link>
+                            <p className="message">Henüz Kayıt Olmadınız mı?  <Link to='/register'><label className='register-label' >Kayıt Ol</label></Link></p>
                         </form>
                     </div>
                 </div>

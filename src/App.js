@@ -1,61 +1,49 @@
 import React, { Component } from 'react';
 import './App.css';
-import {Helmet} from 'react-helmet';
-import Header from './Components/Header/Header';
-import Content from './Components/Content/Content';
-import Input from './Components/Input/Input';
-import Answer from './Components/Answer/Answer';
-import RightBar from './Components/RightBar/RightBar';
-import LeftBar from './Components/LeftBar/LeftBar'
+import { BrowserRouter , Route } from 'react-router-dom';
+
+
+/*============================================================
+                    COMPONENTS
+=============================================================*/
+
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
+import Home from './Components/Home/Home';
 
 class App extends Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            route: 'login'
-        };}
-
-    routeHome= () => {
-            this.setState({route:'home'});
-    }
-    routeRegister= () => {
-            this.setState({route:'register'});
-    }
-    routeLogin = () => {
-            this.setState({route:'login'})
-    }
-
-
+            aciklamaListesi: [
+                {
+                    adres: "Nevşehir, Türkiye",
+                },
+                {
+                    yaş: new Date().getFullYear() - 2001,
+                },
+                {
+                    eposta: "react.developer6@gmail.com",
+                },
+                {
+                    telefon: "0(543) 270 15 88"
+                }
+            ],
+            Titles:['İçinde yaşadığımız evren gerçek mi?','Özgür irademiz var mı?','Neden hiçlik yerine bir şeyler var?','Rakamlar tam olarak nedir?']
+        }}
         render(){
-            return (<div>
-                    <Helmet>
-                        <meta charSet="utf-8"/>
-                        <title>PLANT.CAMP</title>
-                        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
-                              integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt"
-                              crossorigin="anonymous"/>
-                        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet"/>
-                    </Helmet>
-                    {
-                        (this.state.route === 'home')
-                            ?<div>
-                                  <Header/>
-                                  <div className='container'>
-                                    <Content/>
-                                    <Input/>
-                                  </div>
-                                  <Answer/>
-                                  <LeftBar/>
-                                  <RightBar/>
-                              </div>
-                            :((this.state.route === 'login')
-                            ?<Login routeChange={ this.routeHome} routeSwitch={ this.routeRegister }/>
-                            :<Register routeChange={ this.routeLogin }/>)
-
-                    }
-                </div>
+            return (
+                    <BrowserRouter>
+                        <div>
+                            <Route exact path='/' component={Login}/>
+                            <Route path='/register' component={Register}/>
+                            <Route path='/home'
+                                   render={()=>
+                                       <Home
+                                           titles={this.state.Titles} />
+                            }/>
+                        </div>
+                    </BrowserRouter>
             );
         }
     }

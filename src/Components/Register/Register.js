@@ -1,7 +1,7 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
-
-const Register = ({ routeChange }) => {
+const Register = () => {
         return (
           <div className='screen'>
               <div className="login-page">
@@ -14,7 +14,7 @@ const Register = ({ routeChange }) => {
                           <input type="text" placeholder="Kullanıcı Adı"/>
                           <input type="password" placeholder="Şifre"/>
                           <input type="email" placeholder="E-mail"/>
-                          <button onClick={ routeChange}>kayıt ol</button>
+                          <Link to='/'><button>kayıt ol</button></Link>
                       </form>
                   </div>
               </div>
