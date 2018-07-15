@@ -3,7 +3,6 @@ import './Login.css';
 
 const Login = ({ routeChange, routeSwitch }) => {
         return (
-            <div className='screen'>
                 <div className="login-page">
                     <div className='welcome-div'>
                         <p className='welcome-p'>Hoşgeldin!</p>
@@ -18,6 +17,5 @@ const Login = ({ routeChange, routeSwitch }) => {
                         </form>
                     </div>
                 </div>
-            </div>
     );}
     export default Login;

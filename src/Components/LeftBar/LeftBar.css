@@ -1,6 +1,6 @@
 .left-bar{
   top: 0;
-  position: fixed;
+  position: fixed!important;
   width: 100px;
   height: 100%;
   border-right: 2px solid white;
@@ -43,4 +43,37 @@
   top: 340px;
   left: 24px;
   cursor: pointer;
+}  @media screen and (max-width: 500px) {
+              .icon{
+                top: 2px;
+                height: 30px!important;
+                left: 3%;
+              }
+              .icon-back{
+                height: 10%;
+                width: 20%;
+              }
+              .history{
+                height: 20px;
+                left: 4%;
+                  top: 60px;
+              }
+              .settings{
+                height: 20px;
+                left: 4%;
+                  top: 100px;
+              }
+              .phone{
+                height: 20px;
+                left: 4%;
+                  top: 140px;
+              }
+              .zar{
+                height: 20px;
+                left: 4%;
+                  top: 180px;
+              }
+              .left-bar{
+                width: 15%;
+              }
 }

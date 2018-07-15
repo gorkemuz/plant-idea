@@ -2,12 +2,11 @@
 .main{
   position: relative;
   top: 150px;
-  max-width: 600px!important;
-  left: 16.4%;
+  max-width: 800px!important;
+  left: 11.3%;
 }
 .kart{
-    width: 580px;
-    max-width: 600px;
+    width: 730px;
     color: white;
     height: auto;
     background-color: #ffffff;
@@ -22,7 +21,7 @@
 }
 .answer{
     color:#808080!important;
-    max-width: 470px;
+    max-width: 595px;
     float: left;
     margin: 15px;
     }
@@ -57,6 +56,7 @@
 }
 .answers-stats{
   padding: 10px;
+  padding-left: 0;
     position: relative;
     max-width: 50px;
     height: auto;
@@ -65,4 +65,5 @@
     text-align: center;
     float: left;
     top: 20px;
+    cursor: pointer;
 }

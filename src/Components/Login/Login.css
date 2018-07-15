@@ -30,7 +30,7 @@
     font-family: "Roboto", sans-serif;
     text-transform: uppercase;
     outline: 0;
-    background: #6495ed;
+    background: #76b852;
     width: 100%;
     border: 0;
     padding: 15px;
@@ -49,20 +49,11 @@
     font-size: 12px;
 }
 .form .message a {
-    color: #4CAF50;
+    color: #b3b3b3;
     text-decoration: none;
 }
 .form .register-form {
     display: none;
-}
-
-.screen{
-    width: 100%;
-    height: 648px;
-    background-color: #6956CB;
-    font-family: "Roboto", sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 .welcome-div{
     position: absolute;
@@ -76,18 +67,18 @@
     font-weight: bold;
     position: absolute;
     left: 13%;
-    color: #6495ed;
+    color: #666666;
 }
 .info-p{
     position: absolute;
     top: 30%;
-    left: 7%;
+    left: 8.5%;
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     max-width: 400px;
-    color: #4CAF50;
+    color: #666666;
 }
 .register-label{
   cursor: pointer;
-  color: green;
+  color: #4c38b6;
 }

@@ -4,11 +4,11 @@
 }
 .container{
   width: fit-content;
-  max-width: 600px;
+  max-width: 750px;
   color: #5B5D6E;
   height: auto;
   position: relative;
-  left: 17%;
+  left: 12%;
   top: 130px;
   font-family: 'Montserrat', sans-serif!important;
   text-align: center;
@@ -18,3 +18,11 @@
   border-radius: 5px;
   margin-bottom: 0px;
 }
+  @media screen and (max-width: 500px) {
+    .container{
+      max-width: 225px;
+      top: 45px;
+      padding: 0;
+      left: 48px;
+    }
+  }

@@ -21,3 +21,17 @@
     padding-left: 100px;
     padding-right: 65px;
 }
+  @media screen and (max-width: 500px) {
+      .mainInput{
+        margin-bottom: 5px;
+        width: 205px;
+        padding: 0;
+        left: 10px;
+      }
+      .Input{
+        width: 150px!important;
+      }
+      .plant-button{
+        left: 0;
+      }
+  }
