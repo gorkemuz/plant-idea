@@ -1,19 +1,27 @@
-import React,{Component} from "react";
+import React, { Component } from "react";
 import "./content.css";
-import firebase from '../../firebase/firebase';
+import { firebase, hoc } from "../../firebase";
 
-const Content = ({url}) => {
-  let içerik = '';
-  firebase.database().ref('kategoriler').on('value', (snapshot)=> {
-    içerik = snapshot.val()[url].text;
-    console.log(içerik);
-  });
+class Content extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { içerik: "" };
+  }
 
-  return (
-    <p className="içerik" id="içerik">
-      {içerik}
-    </p>
+  render() {
+    return (
+      <p className="içerik" id="içerik">
+        {this.state.içerik}
+      </p>
     );
+  }
 }
 
-export default Content;
+export default hoc(function(url) {
+  return firebase
+    .database()
+    .ref("kategoriler")
+    .on("value", snapshot => {
+      this.setState({ içerik: snapshot.val()[url].text });
+    });
+})(Content);

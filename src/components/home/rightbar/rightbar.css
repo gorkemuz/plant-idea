@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis');
+@import url("https://fonts.googleapis.com/css?family=Dosis");
 .Kategoriler {
   position: absolute;
   color: #535566;
@@ -8,19 +8,21 @@
   height: auto;
   border: solid 1px #d5dde7;
   border-radius: 5px;
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
   width: 300px;
   padding: 5px;
   background-color: #ffffff;
   opacity: 0.95;
   text-align: center;
 }
-.ka{
+.ka {
   text-decoration: none;
   font-size: 15px;
   color: #535566;
 }
-.kategori {
+
+.kategori a {
+  display: block;
   text-align: center;
   margin-left: 10px;
   cursor: pointer;
@@ -28,6 +30,10 @@
   padding-bottom: 10px;
   padding-top: 10px;
 }
+.kategori a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
 .kategori-title {
   padding: 10px;
   padding-left: 20px;
