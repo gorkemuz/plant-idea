@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+.liste{
+  border-top: 1px solid white;
+  z-index: 2;
+  top: 120px;
+  position: fixed;
+  width: 20%;
+  height: 83%;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  overflow: scroll;
+  float: left;
+}
+.liste p{
+  margin: 20px;
+  margin-left: 30px;
+  font-size: 18px;
+}
+.filozof-içerik{
+  width: 80%;
+  float: right;
+  z-index: 0;
+  position: relative;
+  top: 120px;
+  height: auto;
+
+}
+.filozof-içerik h1{
+  padding-left: 30%;
+  font-family: "Montserrat", sans-serif;
+}
+.filozof-içerik p{
+  font-family: "Raleway", sans-serif;
+  padding:30px;
+  padding-bottom: 10px;
+  font-size: 15px;
+}
