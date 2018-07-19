@@ -2,9 +2,8 @@ import React from "react";
 import "./login.css";
 import { Link } from "react-router-dom";
 
-const Login = (props) => {
+const Login = () => {
   const sayı = '/home/'+Math.floor(Math.random() * 4);
-  console.log(props);
   return (
     <div className="login-page">
       <div className="welcome-div">

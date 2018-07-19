@@ -1,16 +1,17 @@
-import React from "react";
+import React,{Component} from "react";
 import "./content.css";
-import * as firebase from 'firebase';
+import firebase from '../../firebase/firebase';
 
-const Content = ( {url} ) => {
-  let text;
-  firebase.database().ref('kategoriler/'+url).on('value', (snapshot) => {
-    text = snapshot.val().text;
+const Content = ({url}) => {
+  let içerik = '';
+  firebase.database().ref('kategoriler').on('value', (snapshot)=> {
+    içerik = snapshot.val()[url].text;
+    console.log(içerik);
   });
-  //const text = title[url].text;
+
   return (
     <p className="içerik" id="içerik">
-      {text}
+      {içerik}
     </p>
     );
 }

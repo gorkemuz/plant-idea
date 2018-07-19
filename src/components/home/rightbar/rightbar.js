@@ -1,23 +1,34 @@
-import React from "react";
+import React, {Component} from "react";
 import "./rightbar.css";
 import {Link} from 'react-router-dom';
-import * as firebase from 'firebase';
+import firebase from '../../firebase/firebase';
 
-const RightBar = () => {
-  let title;
-  firebase.database().ref('kategoriler').on('value', (snapshot) => {
-    title = snapshot.val();
-  });
+class RightBar extends Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      title:[]
+    };
+  }
+
+  componentWillMount = () => {
+    firebase.database().ref('kategoriler').on('value', (snapshot)=> {
+      console.log(snapshot.val());
+      this.setState({title:snapshot.val()})
+    });
+  };
+
+  render(){
   return (
     <div className="Kategoriler">
       <p className="kategori-title">İçerikler</p>
-      {title.map((item, i) => (
+      {this.state.title.map((item, i) => (
         <p key={i} className="kategori">
          <Link className='ka' to={'/home/'+item.id}>{item.title}</Link>
         </p>
       ))}
     </div>
-  );
+  );}
 };
 
 export default RightBar;

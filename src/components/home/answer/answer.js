@@ -1,16 +1,17 @@
-import React from "react";
+import React , {Component} from "react";
 import "./answer.css";
-import * as firebase from 'firebase';
+import firebase from '../../firebase/firebase';
 
 const Answer = ({url}) => {
-  let cevap;
-  firebase.database().ref('kategoriler').on('value', (snapshot) => {
-    cevap = snapshot.val()[url].answer;
-  });
+  let cevap = [];
+    firebase.database().ref('kategoriler').on('value', (snapshot)=> {
+      cevap = cevap.concat(snapshot.val()[url].answer);
+      console.log(cevap);
+    });
   console.log(cevap);
     return (
       <div className="main">
-              {cevap.map((yanıt) => (
+              {cevap.map((yanıt,i) => (
                 <div className="kart">
                   <div className="answers-stats">
                     <img
@@ -29,7 +30,7 @@ const Answer = ({url}) => {
                   </div>
 
                   <div className="content">
-                <p className="answer">
+                <p className="answer" key={i}>
                 {yanıt.text}
                 </p>
                 </div>

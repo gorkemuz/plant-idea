@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "fir-5f855"
+    "default": "fir-5f855",
+    "staging": "fir-5f855"
   }
 }
