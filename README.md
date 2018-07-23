@@ -15,11 +15,6 @@ You need just Node.js and terminal for "npm install"
 
 also live on https://fir-5f855.firebaseapp.com/
 
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
 ## Built With
 
 * [React.js](https://github.com/facebook/react) - The javascript framewok used.<br>
