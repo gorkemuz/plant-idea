@@ -9,7 +9,7 @@ You need just Node.js and terminal for "npm install"
 
 ### Installing
 
--Download zip or clone this repository.
+-Download zip or clone this repository.<br>
 -Write "npm install" on exist document of terminal. 
 -Finally write "npm start" on the same document.
 
