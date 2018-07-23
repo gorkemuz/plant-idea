@@ -10,7 +10,7 @@ You need just Node.js and terminal for "npm install"
 ### Installing
 
 -Download zip or clone this repository.<br>
--Write "npm install" on exist document of terminal. 
+-Write "npm install" on exist document of terminal.<br>
 -Finally write "npm start" on the same document.
 
 also live on https://fir-5f855.firebaseapp.com/
@@ -22,8 +22,8 @@ Explain how to run the automated tests for this system
 
 ## Built With
 
-* [React.js](https://github.com/facebook/react) - The javascript framewok used.
-* [Node.js](https://github.com/nodejs/node) Javascript runtime , used for simple operations.
+* [React.js](https://github.com/facebook/react) - The javascript framewok used.<br>
+* [Node.js](https://github.com/nodejs/node) Javascript runtime , used for simple operations.<br>
 * [Firebase](https://firebase.google.com/docs/) - Used for database operations.
 
 ## Versioning
