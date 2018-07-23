@@ -1,6 +1,6 @@
 # Plant.camp
 
-Plant.camp is philosophy platform made with react.js . The name come from "plant your idea and grow it". If you wanna share your idea you can write and share also if you agree somone you can grow his idea by click water icon. Which content you wanna see ? Click that on the right-bar and see that.
+Plant.camp is philosophy platform made with react.js . The name come from "plant your idea and grow it". If you wanna share your idea for any question or content you can write and share also if you agree somone you can grow his idea by click water icon. Which content you wanna see, click that on the right-bar and look that.
 
 ### Prerequisites
 
