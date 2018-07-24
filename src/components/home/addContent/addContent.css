@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis");
+.f-screen{
+  background-color: #a876e3;
+  height: 620px;
+}
+.içerikler-div {
+    position: relative;
+    color: #535566;
+    font-size: 17px;
+    top: 30px;
+    left: 4%;
+    height: 550px;
+    overflow: scroll;
+    border: solid 1px #d5dde7;
+    border-radius: 5px;
+    font-family: "Dosis", sans-serif;
+    width: 200px;
+    padding: 5px;
+    background-color: #ffffff;
+    opacity: 0.95;
+    text-align: center;
+  }
+.yazı{
+  cursor: pointer;
+}
+.ka:hover{
+  background-color: #e6e6fa;
+}
+.yazı a {
+  display: block;
+  text-align: center;
+  margin-left: 0px;
+  cursor: pointer;
+  border-top: solid 2px #e6ecf5;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.içerikler-başlık {
+  padding: 10px;
+  padding-left: 20px;
+  font-weight: bold;
+}
+.içerik label{
+  color: #6dc066;
+  font-weight: bold;
+}
+.içerik Button{
+  position: relative;
+  float: right;
+  top: -10px;
+  left: 20px;
+}
+.içerik p{
+  width: 600px;
+}
+.cont {
+  width: 750px;
+  color: #5b5d6e;
+  text-align: left!important;
+  height: auto;
+  position: absolute;
+  left: 30%;
+  top: 100px;
+  font-family: "Montserrat", sans-serif !important;
+  text-align: center;
+  background-color: #ffffff;
+  padding: 0px;
+  border: solid 1px #d5dde7;
+  margin-bottom: 0px;
+}
+.card-footer-item:hover{
+  background-color: #d5dde7;
+}
