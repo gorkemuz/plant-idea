@@ -1,4 +1,4 @@
-# Plant.camp<hr>
+# Plant.camp
 
 Plant.camp is philosophy platform made with react.js .The name come from "plant your idea and grow this idea" .Which content(question) if you wanna see , click on it at right-menu.If you wanna say something about that content ,you can write your comment at below. Also if you agree somones idea ,you can grow his idea by click on the  water icon.
 
