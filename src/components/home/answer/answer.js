@@ -11,11 +11,6 @@ class Answer extends Component {
        avaible: true
      };
   }
-  deneme() {
-    this.setState({avaible:false});
-    console.log('anan')
-
-  }
 
   render() {
     return (
@@ -59,6 +54,7 @@ export default hoc(function(url) {
     .database()
     .ref('kategoriler')
     .on('value', snapshot => {
-      this.setState({ cevap: _.values(snapshot.val()[url].answer) });
+      this.setState({ cevap: _.values(_.values(snapshot.val())[url].answer)});
+      console.log(this.state.cevap)
     });
 })(Answer);

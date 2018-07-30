@@ -59,7 +59,8 @@ class App extends React.Component {
             <Route exact path="/" component={Login} />
             <Route path="/register" component={Register} />
             <Route path='/add_content/:id' component={AddContent} />
-          </div>
+            <Route path='/profile/:id' />
+        </div>
         </BrowserRouter>
       );
     } else {

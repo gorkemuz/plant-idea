@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './rightbar.css';
 import { Link } from 'react-router-dom';
+import _ from 'lodash';
 import firebase from '../../firebase/firebase';
 
 class RightBar extends Component {
@@ -16,7 +17,7 @@ class RightBar extends Component {
       .database()
       .ref('kategoriler')
       .on('value', snapshot => {
-        this.setState({ title: snapshot.val() });
+        this.setState({ title: _.values(snapshot.val() )});
       });
   };
 

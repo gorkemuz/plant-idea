@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './content.css';
 import { firebase, hoc } from '../../firebase';
+import _ from 'lodash';
 
 class Content extends Component {
   constructor(props) {
@@ -23,6 +24,6 @@ export default hoc(function(url) {
     .database()
     .ref('kategoriler')
     .on('value', snapshot => {
-      this.setState({ içerik: snapshot.val()[url].text });
+      this.setState({ içerik: _.values(snapshot.val())[url].text});
     });
 })(Content);

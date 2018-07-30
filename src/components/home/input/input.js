@@ -5,6 +5,7 @@ import green from '@material-ui/core/colors/green';
 import Button from '@material-ui/core/Button';
 import './input.css';
 import firebase from '../../firebase/firebase';
+import _ from 'lodash';
 
 const theme = createMuiTheme({
   palette: {
@@ -22,6 +23,7 @@ class Input extends Component {
         id: '',
         yazı: '',
       },
+      deneme: [],
     };
   }
 
@@ -42,11 +44,11 @@ class Input extends Component {
   }
 
   setInput = () => {
-    console.log(this.props.url);
-    firebase
-      .database()
-      .ref('kategoriler/' + this.props.url + '/answer')
-      .push(this.state.içerik);
+    const fire = firebase.database()
+    fire.ref('kategoriler').on('value' , snapshot => {
+      _.values(snapshot.val())[this.props.url].answer = this.state.içerik;
+    })
+    console.log('tıklandı');
   };
 
   render() {

@@ -23,10 +23,18 @@ const Header = ({ kullanıcı_adı, email }) => {
             {firebase.auth().currentUser.displayName}
           </label>
 
-          <img alt="more" className="dot" src="../images/dot.png" width="8px" />
-          <Link className="logout" to="/logout">
-            Log Out
-          </Link>
+          <div className="dropdown">
+            <img alt="more" className="dot" src="../images/dot.png" width="8px" />
+            <div className="dropdown-content">
+              <Link className="logout" to="/logout">
+                çıkış yap
+              </Link>
+              <Link className="logout" to={"/profile/"+firebase.auth().currentUser.uid}>
+                profil
+              </Link>
+          </div>
+</div> 
+
         </div>
       </div>
       {/* =========== FELSEFE MENÜSÜ ============*/}
