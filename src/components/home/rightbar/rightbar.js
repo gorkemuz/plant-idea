@@ -8,7 +8,7 @@ class RightBar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: [],
+      title: []
     };
   }
 
@@ -28,7 +28,7 @@ class RightBar extends Component {
         <p className="kategori-title">İÇERİKLER</p>
         {this.state.title.map((item, i) => (
           <div key={i} className="kategori">
-            <Link className="ka" to={'/home/' + item.id}>
+            <Link className="ka" to={'/home/' + item.key}>
               {item.title}
             </Link>
           </div>

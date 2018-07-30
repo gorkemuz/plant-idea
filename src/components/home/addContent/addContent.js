@@ -17,6 +17,7 @@ class AddContent extends React.Component {
       oluşturText: '',
       oluşturTitle: '',
       içerikSayısı: 0,
+      key: '',
     }}
 
   componentWillMount = () => {
@@ -27,15 +28,14 @@ class AddContent extends React.Component {
       this.setState({title: _.values(snapshot.val()) });
       this.setState({url:this.props.match.params.id})
       this.setState({ içerikSayısı: _.values(snapshot.val()).reverse()[0].id});
-      console.log(this.state.içerikSayısı)
       })
   };
   componentWillReceiveProps(nextProps){
        firebase
       .database()
-      .ref('kategoriler')
+      .ref('kategoriler/'+nextProps.match.params.id)
       .once('value', snapshot => {
-          this.setState({ içerik: _.values(snapshot.val())[nextProps.match.params.id] });
+          this.setState({ içerik: snapshot.val() });
           console.log(this.state.içerik)
         });
      //call your api and update state with new props
@@ -43,7 +43,7 @@ class AddContent extends React.Component {
   başlıkUpdate = () => {
     firebase
     .database()
-    .ref('kategoriler'[this.props.match.params.id])
+    .ref('kategoriler/'+this.props.match.params.id)
     .update({
       title: this.state.düzenleTitle
     })
@@ -57,15 +57,15 @@ class AddContent extends React.Component {
     })
   }
   içerikCreate = () => {
-    const ekle = firebase
-    .database()
-    .ref('kategoriler')
-    .push({
+    const ref = firebase.database().ref('kategoriler').push()
+    const newItem = {
+     key: ref.key,
      title:this.state.oluşturTitle,
      text: this.state.oluşturText,
      id: this.state.içerikSayısı+1
-    })
-    this.state.içerikSayısı = ekle.key;
+    }
+    ref.set(newItem);
+
   }
   render() {
     return (
@@ -74,7 +74,7 @@ class AddContent extends React.Component {
           <p className="içerikler-başlık">İÇERİKLER</p>
           {this.state.title.map((item, i) => (
             <div key={i} className="yazı">
-              <Link className="ka" to={'/add_content/' + item.id}>
+              <Link className="ka" to={'/add_content/' + item.key}>
                 {item.title}
               </Link>
             </div>

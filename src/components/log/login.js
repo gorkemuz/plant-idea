@@ -77,7 +77,7 @@ class Login extends React.Component {
     if (this.state.redirect === 'home') {
       return <Redirect to={sayi} />;
     }else if (this.state.redirect === 'admin'){
-      return <AddContent />
+      return <Redirect to='/add_content/2' />
     }
 
     return (

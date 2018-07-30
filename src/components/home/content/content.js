@@ -22,8 +22,8 @@ class Content extends Component {
 export default hoc(function(url) {
   return firebase
     .database()
-    .ref('kategoriler')
+    .ref('kategoriler/'+url)
     .on('value', snapshot => {
-      this.setState({ içerik: _.values(snapshot.val())[url].text});
+      this.setState({ içerik: _.values(snapshot.val().text)});
     });
 })(Content);

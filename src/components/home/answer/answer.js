@@ -52,9 +52,9 @@ class Answer extends Component {
 export default hoc(function(url) {
   this.ref = firebase
     .database()
-    .ref('kategoriler')
+    .ref('kategoriler/'+url)
     .on('value', snapshot => {
-      this.setState({ cevap: _.values(_.values(snapshot.val())[url].answer)});
+      this.setState({ cevap: _.values(snapshot.val().answer)});
       console.log(this.state.cevap)
     });
 })(Answer);

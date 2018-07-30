@@ -45,9 +45,7 @@ class Input extends Component {
 
   setInput = () => {
     const fire = firebase.database()
-    fire.ref('kategoriler').on('value' , snapshot => {
-      _.values(snapshot.val())[this.props.url].answer = this.state.içerik;
-    })
+    fire.ref('kategoriler').child(this.props.url).child('answer').push(this.state.içerik);
     console.log('tıklandı');
   };
 
