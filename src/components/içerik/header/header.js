@@ -37,14 +37,13 @@ const Header = ({ kullanıcı_adı, email }) => {
 
         </div>
       </div>
-      {/* =========== FELSEFE MENÜSÜ ============*/}
+      {/* =========== FELSEFE MENÜSÜ ============ */}
       <div className="header-menu">
         <p className="menu-items">Felsefe Tarihi</p>
-        <p className="menu-items">Geçmiş Yazılarım</p>
         <Link to="/filozoflar">
           <p className="menu-items">Filozoflar</p>
         </Link>
-        <p className="menu-items">Felsefe Nedir?</p>
+        <p className='menu-items'>Psikanaliz</p>
       </div>
     </div>
   );

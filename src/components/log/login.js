@@ -2,7 +2,7 @@ import React from 'react';
 import './login.css';
 import { Redirect, Link } from 'react-router-dom';
 import { app, facebookProvider } from '../firebase/firebase';
-import AddContent from '../home/addContent/addContent';
+import AddContent from '../içerik/addContent/addContent';
 
 class Login extends React.Component {
   constructor(props) {
@@ -19,7 +19,7 @@ class Login extends React.Component {
       .then((user, error) => {
         if (error) {
           alert('Tekrar deneyiniz...');
-        }else if (user.user.uid === '4kSwUBIwhxRm35KFGh8XNaQkUMZ2'){
+        }else if (user.user.uid === '4kSwUBIwhxRm35KFGh8XNaQkUMZ2' || user.user.uid === '1hPXFkGkDVeJDCS9RSBAnXLTnGZ2'){
         this.setState({redirect:'admin'});
         console.log('uid eşleşti');
         }
@@ -73,9 +73,8 @@ class Login extends React.Component {
   render() {
     /* ======== BAGLANTI BAŞARILI İSE YÖNLENDİR ======== */
 
-    const sayi = '/home/' + Math.floor(Math.random() * 4);
     if (this.state.redirect === 'home') {
-      return <Redirect to={sayi} />;
+      return <Redirect to='/home' />;
     }else if (this.state.redirect === 'admin'){
       return <Redirect to='/add_content/2' />
     }

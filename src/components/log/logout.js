@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { app } from '../firebase/firebase';
-import Header from '../home/header/header';
+import Header from '../içerik/header/header';
 
 class Logout extends Component {
   constructor(props) {

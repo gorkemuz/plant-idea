@@ -18,7 +18,7 @@
   width: 100%;
   height: 60px;
   cursor: pointer;
-  padding-left: 164px;
+  padding-left: 194px;
   background-color: #77ab59;
 }
 .menu-items{
@@ -26,7 +26,7 @@
   position: relative;
   color: white;
   height: 66%;
-  padding: 17px 78px 0px 78px;
+  padding: 17px 120px 0px 120px;
   float: left;
   font-family: "Raleway", sans-serif;
   top: -13px;

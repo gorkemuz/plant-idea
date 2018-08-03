@@ -44,9 +44,13 @@ class Input extends Component {
   }
 
   setInput = () => {
+    if(this.state.içerik.yazı === ''){
+      alert('Lütfen boş cevap göndermeyiniz...')
+    }
+    else{
     const fire = firebase.database()
     fire.ref('kategoriler').child(this.props.url).child('answer').push(this.state.içerik);
-    console.log('tıklandı');
+    console.log('tıklandı');}
   };
 
   render() {
@@ -54,6 +58,9 @@ class Input extends Component {
       <div className="mainInput">
         <MuiThemeProvider theme={theme}>
           <TextField
+            inputProps={{
+              maxLength: 450,
+             }}
             id="textarea mui-theme-provider-input"
             label="Ne Düsünüyorsunuz?"
             multiline

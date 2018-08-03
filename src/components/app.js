@@ -6,9 +6,10 @@ import { app } from './firebase/firebase';
 import Login from './log/login';
 import Logout from './log/logout';
 import Register from './register/register';
-import Home from './home/home';
+import İçerik from './içerik/içerik';
 import Filozof from './menu/filozof';
-import AddContent from './home/addContent/addContent';
+import AddContent from './içerik/addContent/addContent';
+import Home from './home/home';
 
 class App extends React.Component {
   constructor(props) {
@@ -42,12 +43,13 @@ class App extends React.Component {
         <BrowserRouter>
           <div>
             <Route exact path="/logout" component={Logout} />
+            <Route path='/home' component={Home} />
             <Route
               exact
-              path="/home/:id"
+              path="/içerik/:id"
               render={props => {
                 return (
-                  <Home
+                  <İçerik
                     {...props}
                     kullanıcı_adı={this.state.kullanıcı_adı}
                     email={this.state.email}

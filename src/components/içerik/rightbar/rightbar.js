@@ -28,7 +28,7 @@ class RightBar extends Component {
         <p className="kategori-title">İÇERİKLER</p>
         {this.state.title.map((item, i) => (
           <div key={i} className="kategori">
-            <Link className="ka" to={'/home/' + item.key}>
+            <Link className="ka" to={'/içerik/' + item.key}>
               {item.title}
             </Link>
           </div>

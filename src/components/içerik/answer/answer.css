@@ -23,7 +23,9 @@
   color: #808080 !important;
   width: 559px;
   min-height: 80px;
+  min-width: 500px;
   float: left;
+  max-height: 50px;
   margin: 15px;
 }
 .answers-info {

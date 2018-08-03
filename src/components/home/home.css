@@ -1,0 +1,50 @@
+.car {
+    width: 850px;
+    color: white;
+    height: auto;
+    background-color: #ffffff;
+    position: relative;
+    font-family: "PT Sans Narrow", sans-serif !important;
+    font-size: 15px !important;
+    border: solid 1px #d5dde7;
+    border-radius: 5px;
+    float: left;
+    padding: 7px;
+    margin: 10px;
+}
+.main-comp {
+    position: relative;
+    top: 160px;
+    max-width: 800px !important;
+    left: 16.5%;
+}
+.kp{
+    text-decoration: none;
+    font-size: 25px;
+    color: #535566;
+    padding: 20px!important;
+    margin-left:70px;
+}
+.sorular {
+    color: #808080 !important;
+    width: 769px;
+    min-height: 80px;
+    float: left;
+    margin: 5px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+  }
+.conte{
+    padding: 30px;
+}
+.sed{
+position: relative;
+font-size: 15px;
+color: #76b852;
+margin-left: 2px;
+}
+.infos{
+    color: #808080;
+    margin-bottom: 20px;
+    float: right;
+}

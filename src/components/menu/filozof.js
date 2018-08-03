@@ -1,6 +1,6 @@
 import React from 'react';
 import './filozof.css';
-import Header from '../home/header/header';
+import Header from '../içerik/header/header';
 
 const Filozof = () => {
   return (
