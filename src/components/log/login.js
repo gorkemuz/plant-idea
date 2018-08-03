@@ -19,7 +19,7 @@ class Login extends React.Component {
       .then((user, error) => {
         if (error) {
           alert('Tekrar deneyiniz...');
-        }else if (user.user.uid === '4kSwUBIwhxRm35KFGh8XNaQkUMZ2' || user.user.uid === '1hPXFkGkDVeJDCS9RSBAnXLTnGZ2'){
+        }else if (user.user.uid === '4kSwUBIwhxRm35KFGh8XNaQkUMZ2' || user.user.uid === '1hPXFkGkDVeJDCS9RSBAnXLTnGZ2' || user.user.uid === '9Mz0tW1oo0WVSh8UtOQrCJgaoHH2'){
         this.setState({redirect:'admin'});
         console.log('uid eşleşti');
         }
@@ -74,7 +74,7 @@ class Login extends React.Component {
     /* ======== BAGLANTI BAŞARILI İSE YÖNLENDİR ======== */
 
     if (this.state.redirect === 'home') {
-      return <Redirect to='/home' />;
+      return <Redirect to='/içerik/-LIgp9hpxgq4aHZGYQGW' />;
     }else if (this.state.redirect === 'admin'){
       return <Redirect to='/add_content/2' />
     }

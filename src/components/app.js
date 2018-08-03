@@ -9,7 +9,6 @@ import Register from './register/register';
 import İçerik from './içerik/içerik';
 import Filozof from './menu/filozof';
 import AddContent from './içerik/addContent/addContent';
-import Home from './home/home';
 
 class App extends React.Component {
   constructor(props) {
@@ -43,7 +42,6 @@ class App extends React.Component {
         <BrowserRouter>
           <div>
             <Route exact path="/logout" component={Logout} />
-            <Route path='/home' component={Home} />
             <Route
               exact
               path="/içerik/:id"
