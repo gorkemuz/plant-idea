@@ -8,7 +8,7 @@ const Header = ({ kullanıcı_adı, email }) => {
     <div>
       <div className="header">
         {/* =========== LOGO BURAYA EKLENECEK ============*/}
-        <Link to="/home/1" className="logo">
+        <Link to="/içerik/-LIgp9hpxgq4aHZGYQGW" className="logo">
           PLANT.LOGO
         </Link>
         {/* =========== HEADER - KULLANICI KISMI ============*/}

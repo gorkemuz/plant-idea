@@ -9,6 +9,7 @@ import Register from './register/register';
 import İçerik from './içerik/içerik';
 import Filozof from './menu/filozof';
 import AddContent from './içerik/addContent/addContent';
+import Profil from './profil/profil';
 
 class App extends React.Component {
   constructor(props) {
@@ -58,8 +59,8 @@ class App extends React.Component {
             <Route path="/filozoflar" component={Filozof} />
             <Route exact path="/" component={Login} />
             <Route path="/register" component={Register} />
-            <Route path='/add_content/:id' component={AddContent} />
-            <Route path='/profile/:id' />
+            <Route path='/add_content/:contentId' component={AddContent} />
+            <Route path='/profile/:userId' component={Profil} />
         </div>
         </BrowserRouter>
       );

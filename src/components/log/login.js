@@ -1,8 +1,9 @@
 import React from 'react';
 import './login.css';
 import { Redirect, Link } from 'react-router-dom';
-import { app, facebookProvider } from '../firebase/firebase';
+import firebase ,{ app, facebookProvider } from '../firebase/firebase';
 import AddContent from '../içerik/addContent/addContent';
+import _ from 'lodash';
 
 class Login extends React.Component {
   constructor(props) {
@@ -72,9 +73,11 @@ class Login extends React.Component {
   };
   render() {
     /* ======== BAGLANTI BAŞARILI İSE YÖNLENDİR ======== */
-
+    firebase.database().ref('kategoriler').on('value', snapshot => {
+       this.randomIçerik = _.values(snapshot.val())[Math.floor(Math.random() * _.values(snapshot.val()).length)].key;
+      })
     if (this.state.redirect === 'home') {
-      return <Redirect to='/içerik/-LIgp9hpxgq4aHZGYQGW' />;
+        return <Redirect to={'/içerik/'+this.randomIçerik} />;
     }else if (this.state.redirect === 'admin'){
       return <Redirect to='/add_content/2' />
     }

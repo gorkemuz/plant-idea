@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+.wel-div {
+    position: absolute;
+    top: 0px;
+    width: 1000px;
+    height: 200px;
+}
+.log-page {
+  position: relative;
+  top: 200px;
+  height: 170px;
+  width: 1000px;
+  padding: 8% 0 0;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 5px;
+}
+.profil-p{
+    padding-left: 5%;
+    padding-top: 1%!important;
+    color: #666666!important;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    left: 12.5%;
+}

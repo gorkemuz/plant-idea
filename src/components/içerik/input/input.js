@@ -5,7 +5,6 @@ import green from '@material-ui/core/colors/green';
 import Button from '@material-ui/core/Button';
 import './input.css';
 import firebase from '../../firebase/firebase';
-import _ from 'lodash';
 
 const theme = createMuiTheme({
   palette: {
