@@ -3,6 +3,7 @@ html,body {
   margin: 0;
   padding: 0;
   background-color: #77ab59;
+  margin-bottom: 100px!important;
 }
 .button {
   cursor: pointer;

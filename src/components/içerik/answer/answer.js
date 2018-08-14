@@ -8,7 +8,8 @@ class Answer extends Component {
     super(props);
     this.state = {
        cevap: [],
-       avaible: true
+       avaible: true,
+       artı: 0
      };
   }
 
@@ -18,19 +19,19 @@ class Answer extends Component {
         {this.state.cevap.map((yanıt, i) => (
           <div className="kart" key={i}>
             <div className="answers-stats">
-              <img
-                alt="user"
-                className="arrow-up"
-                src="../images/arrow-up.png"
-                height="34px"
-              />
-              <i className="fas fa-seedling seed" />
+              <i className="fas fa-tint arrow-up" onClick={() => {
+                  yanıt.damla = yanıt.damla+1;
+                  firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key).child('damla').set(yanıt.damla)
+                  document.getElementById(i).innerHTML= yanıt.damla
+                  }}></i>
+              <i className="fas fa-seedling seed" ></i>
               <img
                 alt="user"
                 className="arrow-down"
                 src="../images/arrow.png"
-                height="34px"
-              />
+                height="20px"
+              ></img>
+              <label class='yanıt-damla' id={i} >{yanıt.damla}</label>
             </div>
 
             <div className="content">

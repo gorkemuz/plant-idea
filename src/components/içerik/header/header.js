@@ -2,13 +2,24 @@ import React from 'react';
 import './header.css';
 import { Link } from 'react-router-dom';
 import firebase from '../../firebase/firebase';
+import _ from 'lodash';
 
-const Header = ({ kullanıcı_adı, email }) => {
+class Header extends React.Component{
+  constructor(props) {
+    super(props);
+    this.state = {
+      randomIçerik: '',
+    };
+  }
+  componentWillMount = () => { firebase.database().ref('kategoriler').on('value', snapshot => {
+    this.setState({randomIçerik: _.values(snapshot.val())[Math.floor(Math.random() * _.values(snapshot.val()).length)].key})
+   })}
+  render(){
   return (
     <div>
       <div className="header">
         {/* =========== LOGO BURAYA EKLENECEK ============*/}
-        <Link to="/içerik/-LIgp9hpxgq4aHZGYQGW" className="logo">
+        <Link to={'/içerik/'+this.state.randomIçerik} className="logo">
           PLANT.LOGO
         </Link>
         {/* =========== HEADER - KULLANICI KISMI ============*/}
@@ -32,21 +43,15 @@ const Header = ({ kullanıcı_adı, email }) => {
               <Link className="logout" to={"/profile/"+firebase.auth().currentUser.uid}>
                 profil
               </Link>
-          </div>
-</div> 
+            </div>
+          </div> 
 
         </div>
       </div>
       {/* =========== FELSEFE MENÜSÜ ============ */}
-      <div className="header-menu">
-        <p className="menu-items">Felsefe Tarihi</p>
-        <Link to="/filozoflar">
-          <p className="menu-items">Filozoflar</p>
-        </Link>
-        <p className='menu-items'>Psikanaliz</p>
-      </div>
+
     </div>
-  );
+  );}
 };
 
 export default Header;

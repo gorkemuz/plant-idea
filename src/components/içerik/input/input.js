@@ -44,11 +44,18 @@ class Input extends Component {
 
   setInput = () => {
     if(this.state.içerik.yazı === ''){
-      alert('Lütfen boş cevap göndermeyiniz...')
+      alert('Boş cevap gönderemezsiniz!')
     }
     else{
-    const fire = firebase.database()
-    fire.ref('kategoriler').child(this.props.url).child('answer').push(this.state.içerik);
+    const ref = firebase.database().ref('kategoriler').child(this.props.url).child('answer').push();
+    const newItem = {
+      key: ref.key,
+      yazı: this.state.içerik.yazı,
+      date: this.state.içerik.date,
+      damla:0,
+      id: this.state.içerik.id,
+    }
+    ref.set(newItem);
     console.log('tıklandı');}
   };
 

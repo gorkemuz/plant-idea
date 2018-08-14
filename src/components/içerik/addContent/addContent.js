@@ -27,13 +27,13 @@ class AddContent extends React.Component {
     .on('value', snapshot => {
       this.setState({title: _.values(snapshot.val()) });
       this.setState({url:this.props.match.params.id})
-      this.setState({ içerikSayısı: _.values(snapshot.val()).reverse()[0].id});
+      //this.setState({ içerikSayısı: _.values(snapshot.val()).reverse()[0].id});
       })
   };
   componentWillReceiveProps(nextProps){
        firebase
       .database()
-      .ref('kategoriler/'+nextProps.match.params.id)
+      .ref('kategoriler/'+nextProps.match.params.contentId)
       .once('value', snapshot => {
           this.setState({ içerik: snapshot.val() });
           console.log(this.state.içerik)
