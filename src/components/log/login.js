@@ -2,7 +2,6 @@ import React from 'react';
 import './login.css';
 import { Redirect, Link } from 'react-router-dom';
 import firebase ,{ app, facebookProvider } from '../firebase/firebase';
-import AddContent from '../içerik/addContent/addContent';
 import _ from 'lodash';
 
 class Login extends React.Component {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './answer.css';
 import { firebase, hoc } from '../../firebase';
 import _ from 'lodash';
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 class Answer extends Component {
   constructor(props) {
@@ -9,7 +10,8 @@ class Answer extends Component {
     this.state = {
        cevap: [],
        avaible: true,
-       artı: 0
+      artı: 0,
+      var: true,
      };
   }
 
@@ -19,10 +21,24 @@ class Answer extends Component {
         {this.state.cevap.map((yanıt, i) => (
           <div className="kart" key={i}>
             <div className="answers-stats">
-              <i className="fas fa-tint arrow-up" onClick={() => {
-                  yanıt.damla = yanıt.damla+1;
-                  firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key).child('damla').set(yanıt.damla)
-                  document.getElementById(i).innerHTML= yanıt.damla
+            <i className="fas fa-tint arrow-up" id={i}  onClick={() => {
+                firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key).child('damla')
+                  .on('value', snapshot =>  {
+                    this.usr = _.values(snapshot.val());
+                  })
+                  .then(() => {this.usr.map((us,i) => {
+                    if(us.user === firebase.auth().currentUser.uid){
+                      this.setState({ var: false})
+                    }
+                  })})
+                  .then(() => {
+                    document.getElementById(i).style.color = '#f6546a'
+                    document.getElementsByClassName(i).innerHTML = _.values(yanıt.damla.length);
+                    if(this.state.var === true){
+                    firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key).child('damla').push({
+                      'user': firebase.auth().currentUser.uid
+                    })
+                  }})
                   }}></i>
               <i className="fas fa-seedling seed" ></i>
               <img
@@ -30,8 +46,13 @@ class Answer extends Component {
                 className="arrow-down"
                 src="../images/arrow.png"
                 height="20px"
+                onClick={()=> {
+                  firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key).child('damla').set(                       yanıt.damla)
+                  // document.getElementsByClassName(i).innerHTML = yanıt.damla;
+                  document.getElementById(i).style.color = '#3399ff'
+                }}
               ></img>
-              <label class='yanıt-damla' id={i} >{yanıt.damla}</label>
+              <label className={i} ><label className='yanıt-damla'>{_.values(yanıt.damla).length}</label></label>
             </div>
 
             <div className="content">
@@ -56,6 +77,5 @@ export default hoc(function(url) {
     .ref('kategoriler/'+url)
     .on('value', snapshot => {
       this.setState({ cevap: _.values(snapshot.val().answer)});
-      console.log(this.state.cevap)
     });
 })(Answer);

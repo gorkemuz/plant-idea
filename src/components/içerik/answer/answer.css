@@ -42,12 +42,13 @@
 }
 .answer-nick {
   position: relative;
-  color: purple;
+  color:  #9852a8;
   padding: 15px;
+  font-weight: 900!important;
 }
 .answer-date {
   position: relative;
-  color: #008000;
+  color: #4d4d4d;
 }
 .seed {
   position: relative;

@@ -52,7 +52,7 @@ class Input extends Component {
       key: ref.key,
       yazı: this.state.içerik.yazı,
       date: this.state.içerik.date,
-      damla:0,
+      damla: {'-LJxcuGjenIP22Pj3kpn': {'user': firebase.auth().currentUser.uid}},
       id: this.state.içerik.id,
     }
     ref.set(newItem);

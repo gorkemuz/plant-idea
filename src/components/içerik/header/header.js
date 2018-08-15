@@ -25,7 +25,7 @@ class Header extends React.Component{
         {/* =========== HEADER - KULLANICI KISMI ============*/}
         <div className="header-right">
           <img
-            alt="user"
+            lt="user"
             className="user"
             src="../images/farmer1.png"
             height="48px"
@@ -44,7 +44,7 @@ class Header extends React.Component{
                 profil
               </Link>
             </div>
-          </div> 
+          </div>
 
         </div>
       </div>
