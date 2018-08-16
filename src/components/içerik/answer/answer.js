@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './answer.css';
 import { firebase, hoc } from '../../firebase';
 import _ from 'lodash';
-import createBreakpoints from '@material-ui/core/styles/createBreakpoints';
 
 class Answer extends Component {
   constructor(props) {
@@ -11,9 +10,33 @@ class Answer extends Component {
        cevap: [],
        avaible: true,
       artı: 0,
-      var: true,
+      var: '',
      };
   }
+  sıfırla = () => {
+      this.setState({var: ''})}
+  arttır = (yanıt,callback) => {
+    console.log(this.state.var)
+    if(this.state.var === ''){
+    console.log('3 eşleşmemiş ekleniyo')
+    firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key+'/damla')
+    .push(
+      {
+         'user': firebase.auth().currentUser.uid
+      }
+    )}else{
+      console.log('eşleşmiş eklenmiyo')
+      callback();
+      }}
+  kontrol = (yanıt,callback) => {
+    this.usr.map((us) => {
+      if(us.user === firebase.auth().currentUser.uid){
+        this.state.var = 'var';
+        console.log(this.state.var)
+      }
+      else{console.log('2 eşleşmedi')}
+    })
+    callback(yanıt,this.sıfırla)}
 
   render() {
     return (
@@ -21,24 +44,14 @@ class Answer extends Component {
         {this.state.cevap.map((yanıt, i) => (
           <div className="kart" key={i}>
             <div className="answers-stats">
-            <i className="fas fa-tint arrow-up" id={i}  onClick={() => {
-                firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key).child('damla')
-                  .on('value', snapshot =>  {
+            <i className="fas fa-tint arrow-up" id={i} onClick={() => {
+              firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key).child('damla') .on('value', snapshot =>  {
                     this.usr = _.values(snapshot.val());
+                    console.log("1")
                   })
-                  .then(() => {this.usr.map((us,i) => {
-                    if(us.user === firebase.auth().currentUser.uid){
-                      this.setState({ var: false})
-                    }
-                  })})
-                  .then(() => {
-                    document.getElementById(i).style.color = '#f6546a'
-                    document.getElementsByClassName(i).innerHTML = _.values(yanıt.damla.length);
-                    if(this.state.var === true){
-                    firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key).child('damla').push({
-                      'user': firebase.auth().currentUser.uid
-                    })
-                  }})
+              document.getElementById(i).style.color = '#f6546a'
+              document.getElementsByClassName(i).innerHTML = _.values(yanıt.damla.length-1);
+              this.kontrol(yanıt,this.arttır);
                   }}></i>
               <i className="fas fa-seedling seed" ></i>
               <img
@@ -52,7 +65,7 @@ class Answer extends Component {
                   document.getElementById(i).style.color = '#3399ff'
                 }}
               ></img>
-              <label className={i} ><label className='yanıt-damla'>{_.values(yanıt.damla).length}</label></label>
+              <label className={i} ><label className='yanıt-damla'>{_.values(yanıt.damla).length-1}</label></label>
             </div>
 
             <div className="content">
