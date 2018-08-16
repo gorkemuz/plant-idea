@@ -4,7 +4,7 @@ Plant-idea is philosophy platform made with react.js .The name come from "plant 
 
 ### Prerequisites
 
-You need just Node.js and terminal for "npm install"
+You need just Node.js and terminal
 
 
 ### Installing
