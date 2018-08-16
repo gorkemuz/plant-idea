@@ -56,6 +56,12 @@
   color: #76b852;
   margin-bottom: 2px;
 }
+.tree{
+  position:relative;
+  font-size:22px;
+  color: #76b852;
+  margin-bottom: 2px;
+}
 .arrow-up {
   position: relative;
   margin-bottom: 2px;

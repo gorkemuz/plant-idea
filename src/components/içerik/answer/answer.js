@@ -11,33 +11,97 @@ class Answer extends Component {
        avaible: true,
       artı: 0,
       var: '',
+      kazma: '',
      };
   }
-  sıfırla = () => {
-      this.setState({var: ''})}
-  arttır = (yanıt,callback) => {
+  componentDidMount = () => {
+    firebase.database().ref('kategoriler/'+this.props.url+'/answer').on('value', snapshot => {
+      const veri = _.values(snapshot.val());
+      veri.map((yanıt,i) =>  {
+        _.values(yanıt.damla).map((us) => {
+          if(us.user === firebase.auth().currentUser.uid){
+            //document.getElementById(i).style.color = '#3399ff'
+          }
+        })
+      })
+  })
+  }
+/* ============================== DAMLA +++++++++++++  DAMLA =================================== */
+  arttır = (yanıt,i,callback) => {
     console.log(this.state.var)
     if(this.state.var === ''){
     console.log('3 eşleşmemiş ekleniyo')
-    firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key+'/damla')
-    .push(
-      {
-         'user': firebase.auth().currentUser.uid
+    document.getElementById(i).style.color = '#ffa500'
+    const ref = firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key+'/damla').push()
+      const newItem ={
+        key: ref.key,
+        user: firebase.auth().currentUser.uid
       }
-    )}else{
+      ref.set(newItem)
+      _.values(yanıt.kazma).map((us) => {
+        if(us.user === firebase.auth().currentUser.uid){
+          console.log(us.user)
+          firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key+'/kazma/'+us.key).remove()
+        }
+        else{console.log('2 eşleşmedi kazma')}
+      })
+    }else{
       console.log('eşleşmiş eklenmiyo')
       callback();
       }}
-  kontrol = (yanıt,callback) => {
-    this.usr.map((us) => {
+  kontrol = (yanıt,i,callback) => {
+    _.values(yanıt.damla).map((us) => {
       if(us.user === firebase.auth().currentUser.uid){
         this.state.var = 'var';
-        console.log(this.state.var)
+        document.getElementById(i).style.color = '#3399ff'
+        console.log(us.user)
+        firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key+'/damla/'+us.key).remove()
       }
       else{console.log('2 eşleşmedi')}
-    })
-    callback(yanıt,this.sıfırla)}
+     })
+    callback(yanıt,i,this.sıfırla)}
 
+/* ============================== KAZMA ------ KAZMA =================================== */
+  sıfırla = () => {
+    this.setState({kazma: ''})
+    this.setState({var: ''})
+  }
+
+  kontrolKazma = (yanıt,i,callback) => {
+    _.values(yanıt.kazma).map((us) => {
+      if(us.user === firebase.auth().currentUser.uid){
+        this.state.kazma = 'var';
+        console.log(us.user)
+        document.getElementById(i).style.color = '#3399ff'
+        firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key+'/kazma/'+us.key).remove()
+      }
+      else{console.log('2 eşleşmedi kazma')}
+    })
+    callback(yanıt,i,this.sıfırla)
+  }
+
+  arttırKazma = (yanıt,i,callback) => {
+    console.log(this.state.kazma)
+    if(this.state.kazma === ''){
+    console.log('3 eşleşmemiş ekleniyo')
+    document.getElementById(i).style.color = '#8a2be2'
+    const ref = firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key+'/kazma').push()
+      const newItem ={
+        key: ref.key,
+        user: firebase.auth().currentUser.uid
+      }
+      ref.set(newItem)
+      _.values(yanıt.damla).map((us) => {
+        if(us.user === firebase.auth().currentUser.uid){
+          console.log(us.user)
+          firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key+'/damla/'+us.key).remove()
+        }
+        else{console.log('2 eşleşmedi kazma')}
+      })
+    }else{
+      console.log('eşleşmiş eklenmiyo')
+      callback();
+      }}
   render() {
     return (
       <div className="main">
@@ -45,27 +109,21 @@ class Answer extends Component {
           <div className="kart" key={i}>
             <div className="answers-stats">
             <i className="fas fa-tint arrow-up" id={i} onClick={() => {
-              firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key).child('damla') .on('value', snapshot =>  {
-                    this.usr = _.values(snapshot.val());
-                    console.log("1")
-                  })
-              document.getElementById(i).style.color = '#f6546a'
-              document.getElementsByClassName(i).innerHTML = _.values(yanıt.damla.length-1);
-              this.kontrol(yanıt,this.arttır);
+
+              this.kontrol(yanıt,i,this.arttır);
+
                   }}></i>
-              <i className="fas fa-seedling seed" ></i>
+                {((_.values(yanıt.damla).length-1)-(_.values(yanıt.kazma).length-1))>5?<i className="fas fa-tree tree"></i>:<i className="fas fa-seedling seed" ></i>}
               <img
                 alt="user"
                 className="arrow-down"
                 src="../images/arrow.png"
                 height="20px"
                 onClick={()=> {
-                  firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key).child('damla').set(                       yanıt.damla)
-                  // document.getElementsByClassName(i).innerHTML = yanıt.damla;
-                  document.getElementById(i).style.color = '#3399ff'
+                  this.kontrolKazma(yanıt,i,this.arttırKazma);
                 }}
               ></img>
-              <label className={i} ><label className='yanıt-damla'>{_.values(yanıt.damla).length-1}</label></label>
+              <label className={i} ><label className='yanıt-damla'>{(_.values(yanıt.damla).length-1)-(_.values(yanıt.kazma).length-1)}</label></label>
             </div>
 
             <div className="content">
