@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './answer.css';
 import { firebase, hoc } from '../../firebase';
 import _ from 'lodash';
+import ReactDOM from 'react-dom';
 
 class Answer extends Component {
   constructor(props) {
@@ -14,19 +15,8 @@ class Answer extends Component {
       kazma: '',
      };
   }
-  componentDidMount = () => {
-    firebase.database().ref('kategoriler/'+this.props.url+'/answer').on('value', snapshot => {
-      const veri = _.values(snapshot.val());
-      veri.map((yanıt,i) =>  {
-        _.values(yanıt.damla).map((us) => {
-          if(us.user === firebase.auth().currentUser.uid){
-            //document.getElementById(i).style.color = '#3399ff'
-          }
-        })
-      })
-  })
-  }
-/* ============================== DAMLA +++++++++++++  DAMLA =================================== */
+
+/* ============================== DAMLA +++++++++++++ DAMLA =================================== */
   arttır = (yanıt,i,callback) => {
     console.log(this.state.var)
     if(this.state.var === ''){
@@ -38,13 +28,6 @@ class Answer extends Component {
         user: firebase.auth().currentUser.uid
       }
       ref.set(newItem)
-      _.values(yanıt.kazma).map((us) => {
-        if(us.user === firebase.auth().currentUser.uid){
-          console.log(us.user)
-          firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key+'/kazma/'+us.key).remove()
-        }
-        else{console.log('2 eşleşmedi kazma')}
-      })
     }else{
       console.log('eşleşmiş eklenmiyo')
       callback();
@@ -91,18 +74,25 @@ class Answer extends Component {
         user: firebase.auth().currentUser.uid
       }
       ref.set(newItem)
-      _.values(yanıt.damla).map((us) => {
-        if(us.user === firebase.auth().currentUser.uid){
-          console.log(us.user)
-          firebase.database().ref('kategoriler/'+this.props.url+'/answer/'+yanıt.key+'/damla/'+us.key).remove()
-        }
-        else{console.log('2 eşleşmedi kazma')}
-      })
     }else{
       console.log('eşleşmiş eklenmiyo')
       callback();
-      }}
-  render() {
+    }}
+
+  render(
+   componentDidMount = () => {
+    firebase.database().ref('kategoriler/'+this.props.url+'/answer').on('value', snapshot => {
+      const veri = _.values(snapshot.val());
+      veri.map((yanıt,i) =>  {
+        _.values(yanıt.damla).map((us) => {
+          if(us.user === firebase.auth().currentUser.uid){
+            document.getElementById(i).style.color = 'blue'
+          }
+        })
+      })
+  })
+  }
+  ) {
     return (
       <div className="main">
         {this.state.cevap.map((yanıt, i) => (
@@ -112,9 +102,11 @@ class Answer extends Component {
 
               this.kontrol(yanıt,i,this.arttır);
 
-                  }}></i>
-                {((_.values(yanıt.damla).length-1)-(_.values(yanıt.kazma).length-1))>5?<i className="fas fa-tree tree"></i>:<i className="fas fa-seedling seed" ></i>}
-              <img
+                  }}></i> <label className={i} ><label className='yanıt-damla'>{(_.values(yanıt.damla).length)}</label></label>
+
+                {((_.values(yanıt.damla).length-1)+(_.values(yanıt.kazma).length-1))>5?<i className="fas fa-tree tree"></i>:<i className="fas fa-seedling seed" ></i>}
+                <label className={i} ><label className='yanıt-damla'>{-(_.values(yanıt.kazma).length)}</label></label>
+                <img
                 alt="user"
                 className="arrow-down"
                 src="../images/arrow.png"
@@ -123,8 +115,9 @@ class Answer extends Component {
                   this.kontrolKazma(yanıt,i,this.arttırKazma);
                 }}
               ></img>
-              <label className={i} ><label className='yanıt-damla'>{(_.values(yanıt.damla).length-1)-(_.values(yanıt.kazma).length-1)}</label></label>
-            </div>
+
+
+                          </div>
 
             <div className="content">
               <p className="answer" key={i}>

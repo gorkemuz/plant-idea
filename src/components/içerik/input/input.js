@@ -30,11 +30,11 @@ class Input extends Component {
     const a = firebase.auth().currentUser.displayName;
     const currentdate = new Date();
     let gg = currentdate.getDate()
-    let aa = (currentdate.getMonth()+1) 
+    let aa = (currentdate.getMonth()+1)
     const yy = currentdate.getFullYear();
     gg = gg < 10 ? '0'+gg : gg;
-    aa = aa < 10 ? '0'+aa : aa;  
-    
+    aa = aa < 10 ? '0'+aa : aa;
+
 
     const içerik = { ...this.state.içerik };
     içerik.id = a;
@@ -52,7 +52,7 @@ class Input extends Component {
       key: ref.key,
       yazı: this.state.içerik.yazı,
       date: this.state.içerik.date,
-      damla: {'-LJxcuGjenIP22Pj3kpn': {'user': firebase.auth().currentUser.uid}},
+
       id: this.state.içerik.id,
     }
     ref.set(newItem);
