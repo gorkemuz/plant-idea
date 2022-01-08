@@ -1,6 +1,6 @@
 # Plant-idea
 
-Plant-idea is philosophy platform, maden with react.js .The name comes from "plant your idea and grow that". If you agree with somones idea ,you can grow that idea by clicking over the water icon.
+Plant-idea is philosophy platform, built with react.js .The name comes from "plant your idea and grow that". If you agree with somones idea ,you can grow that idea by clicking over the water icon.
 
 ### Prerequisites
 
